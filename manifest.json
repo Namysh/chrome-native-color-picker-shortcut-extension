@@ -1,0 +1,35 @@
+{
+    "name": "Chrome native color picker shortcut",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Launch the Chrome native color picker with Ctrl(Win)/Command(Mac) + Shift + 1",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "icon.png",
+        "default_title": "Chrome native color picker shortcut"
+    },
+    "commands": {
+        "quickLaunch": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+1"
+            },
+            "global": true,
+            "description": "Launch Chrome native color picker"
+        }
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "notifications"
+    ],
+    "host_permissions": [
+        "*://*/*"
+    ]
+}
